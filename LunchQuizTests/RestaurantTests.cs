@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using LunchQuiz;
 //there's a specific "using" you need in order to create lists
 
 namespace LunchQuizTests
@@ -26,7 +27,7 @@ namespace LunchQuizTests
         public void RestaurantMenuItemsAreCorrectType()
         {
             Restaurant joes = new Restaurant();
-            Assert.IsInstanceOfType(joes.MenuItems, typeof(List<MenuItem>));
+            Assert.IsInstanceOfType(joes.MenuItems, typeof(System.Collections.Generic.List<MenuItem>));
         }
         [TestMethod]
         public void RestaurantHasCurrentCustomers()
@@ -40,7 +41,7 @@ namespace LunchQuizTests
         public void RestaurantCurrentCustomersAreCorrectType()
         {
             Restaurant joes = new Restaurant();
-            Assert.IsInstanceOfType(joes.CurrentCustomers, typeof(List<Customer>));
+            Assert.IsInstanceOfType(joes.CurrentCustomers, typeof(System.Collections.Generic.List<Customer>));
         }
         [TestMethod]
         public void RestaurantCanAddToCurrentCustomer()
